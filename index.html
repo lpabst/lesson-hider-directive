@@ -8,11 +8,12 @@
 </head>
 <body ng-controller='lessonCtrl'>
     
-<lesson-hider lesson='test'></lesson-hider>
+    <ul>
+        <lesson-hider lesson='lesson' ng-repeat='lesson in lessons'></lesson-hider>
+    </ul>
 
 <br>
-<input ng-model='test'>
-{{test}}
+
 
 
 
