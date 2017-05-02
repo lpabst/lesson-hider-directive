@@ -6,10 +6,17 @@ $scope.lessons = ['Services', 'Routing', 'Directives', 'Review', 'Firebase', 'No
 $scope.test = 'Two-way data binding!';
 
 $scope.announceDay = function(lesson, day){
-    alert('Lesson ' + lesson + ' is active on ' + day + '.');
+    if (day){
+        alert('Lesson ' + lesson + ' is active on ' + day + '.');
+    }else{
+        alert('Not yet scheduled, son!');
+    }
+    
 }
 
-
+$scope.deleteLesson = function(index){
+    $scope.lessons.splice(index, 1);
+}
 
 
 

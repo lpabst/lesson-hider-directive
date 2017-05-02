@@ -7,6 +7,7 @@ angular.module('directivePractice')
         scope: {
             lesson: '=',
             dayAlert: '&',
+            delete: '&',
         },
         link: function (scope, elem, atts){
             scope.getSchedule.then(function(response){
@@ -14,16 +15,24 @@ angular.module('directivePractice')
             
                 scope.schedule.forEach(function(scheduleDay){
                     if (scheduleDay.lesson === scope.lesson){
-                        elem.css('text-decoration', 'line-through');
+                        scope.toggleChecked();
                         scope.lessonDay = scheduleDay.weekday;
                         return;
                     }
                 })
                 
             })
+            scope.toggleChecked = function(){
+                elem.toggleClass('checked_off');
+            }
+
         },
         controller: function($scope, lessonService) {
             $scope.getSchedule = lessonService.getSchedule();
+
+            // $scope.deleteLesson = function(index){
+            //     elem.delete();
+            // }
         }
     }
 

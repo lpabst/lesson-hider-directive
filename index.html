@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel='stylesheet' href='main.css'>
 </head>
 <body ng-controller='lessonCtrl'>
     
     <ul>
-        <lesson-hider lesson='lesson' ng-repeat='lesson in lessons' day-alert='announceDay(lesson, day)'></lesson-hider>
+        <lesson-hider delete = 'deleteLesson({index: $index})' lesson='lesson' ng-repeat='lesson in lessons' day-alert='announceDay(lesson, day)'></lesson-hider>
     </ul>
 
 <br>

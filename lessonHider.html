@@ -1,4 +1,5 @@
 <li>
-{{lesson}}
-</li>
-<button ng-click='dayAlert({lesson: lesson, day: lessonDay})'>View Day</button>
+{{lesson}} <input type='checkbox' ng-click='toggleChecked()'/>
+</li> 
+<button ng-click='dayAlert({lesson: lesson, day: lessonDay})'>View Active Day</button>
+<button ng-click='delete($index)'>Delete Lesson</button>

@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.checked_off{
+    text-decoration: line-through;
+}
+
+
