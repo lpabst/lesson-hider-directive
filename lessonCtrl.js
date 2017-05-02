@@ -5,6 +5,13 @@ $scope.lessons = ['Services', 'Routing', 'Directives', 'Review', 'Firebase', 'No
 
 $scope.test = 'Two-way data binding!';
 
+$scope.announceDay = function(lesson, day){
+    alert('Lesson ' + lesson + ' is active on ' + day + '.');
+}
+
+
+
+
 
 
 });
